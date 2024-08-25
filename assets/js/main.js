@@ -113,36 +113,4 @@ sections.forEach(current =>{
   }
 })
 }
-
-
-// Get the send button and form inputs
-const sendButton = document.querySelector('.form-button button');
-const nameInput = document.querySelector('.form-inputs input[name="name"]');
-const emailInput = document.querySelector('.form-inputs input[name="email"]');
-const messageInput = document.querySelector('.text-area textarea');
-
-// Add event listener to the send button
-sendButton.addEventListener('click', (e) => {
-  e.preventDefault(); // Prevent default form submission behavior
-
-  // Get the input values
-  const name = nameInput.value.trim();
-  const email = emailInput.value.trim();
-  const message = messageInput.value.trim();
-
-  // Check if all fields are filled
-  if (name && email && message) {
-    // Send the form data to the server or API (replace with your own logic)
-    console.log('Form data:', { name, email, message });
-
-    // Clear the form inputs
-    nameInput.value = '';
-    emailInput.value = '';
-    messageInput.value = '';
-  } else {
-    alert('Please fill all fields!');
-  }
-});
-
-
 window.addEventListener('scroll', scrollActive)
